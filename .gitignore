@@ -1,0 +1,16 @@
+# IntelliJ
+.idea/
+*.iml
+
+# Maven
+target/
+
+# Java
+*.class
+
+# PCAP files
+*.pcap
+
+# OS files
+.DS_Store
+Thumbs.db
