@@ -11,8 +11,7 @@ import java.nio.ByteOrder;
 /**
  * Writes an output .pcap file: a 24-byte global header followed by any
  * number of (16-byte header + payload) packet records.
- *
- * <p>The original {@code DPIEngine::process()} in dpi_mt.cpp writes the
+ * <p>The {@code DPIEngine::process()} in dpi writes the
  * global header it just read back out verbatim, and then always writes new
  * packet headers in the host's native byte order. Every platform the
  * original project targets (and this Java port) is little-endian, so this

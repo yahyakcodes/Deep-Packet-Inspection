@@ -10,11 +10,8 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * Bounded, blocking, thread-safe queue used to pass packets between the
  * reader, load-balancer, and fast-path threads.
- *
- * <p>Direct port of the {@code TSQueue<T>} template defined locally in
- * dpi_mt.cpp (equivalent in spirit to {@code DPI::ThreadSafeQueue} in
- * thread_safe_queue.h).
- *
+ * <p>{@code ThreadSafeQueue<T>} template defined
+ * {@code DPI::ThreadSafeQueue} in thread_safe_queue.
  * @param <T> element type
  */
 public final class ThreadSafeQueue<T> {

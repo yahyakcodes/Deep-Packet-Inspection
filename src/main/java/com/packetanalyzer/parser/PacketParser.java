@@ -5,7 +5,7 @@ import com.packetanalyzer.util.IpAddress;
 
 /**
  * Parses the Ethernet/IPv4/TCP/UDP headers out of a raw captured packet.
- * Direct port of {@code PacketAnalyzer::PacketParser} (packet_parser.cpp).
+ * {@code PacketAnalyzer::PacketParser}.
  */
 public final class PacketParser {
 

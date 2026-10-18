@@ -12,8 +12,8 @@ import java.util.Optional;
 /**
  * Reads packets out of a .pcap file.
  *
- * <p>Direct port of {@code PacketAnalyzer::PcapReader} (pcap_reader.h/.cpp).
- * There is no dependency on libpcap/Npcap here: the original project never
+ * <p>{@code PacketAnalyzer::PcapReader}
+ * There is no dependency on libpcap/Npcap here: the project never
  * performs live capture, it only parses the well-documented, self
  * describing .pcap file format by hand, so this port does the same with
  * plain Java I/O. This is why the project does not pull in a library such

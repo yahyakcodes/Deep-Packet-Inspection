@@ -8,8 +8,8 @@ import java.util.concurrent.atomic.AtomicLong;
 /**
  * A single Load Balancer (LB) worker thread: pops packets from its own
  * input queue (fed by the reader) and consistently hashes each one's
- * five-tuple to pick which Fast Path thread should own that flow. Direct
- * port of the {@code LoadBalancer} class defined locally in dpi_mt.cpp.
+ * five-tuple to pick which Fast Path thread should own that flow.
+ * {@code LoadBalancer} class defined.
  */
 public final class LoadBalancer {
 

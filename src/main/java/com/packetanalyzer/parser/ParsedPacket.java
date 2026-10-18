@@ -2,10 +2,9 @@ package com.packetanalyzer.parser;
 
 /**
  * Human-readable, parsed view of a raw packet's protocol headers.
- * Direct port of {@code PacketAnalyzer::ParsedPacket} (packet_parser.h).
- *
+ * {@code PacketAnalyzer::ParsedPacket}.
  * <p>This is a plain mutable holder filled in by {@link PacketParser#parse},
- * the same way the original C++ struct is filled in field-by-field.
+ * the same way filled in field-by-field.
  */
 public final class ParsedPacket {
 

@@ -5,9 +5,8 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
- * Thread-safe processing statistics. Direct port of the {@code Stats}
- * struct defined locally in dpi_mt.cpp.
- */
+ * Thread-safe processing statistics. {@code Stats}
+ **/
 public final class Statistics {
 
     public final AtomicLong totalPackets = new AtomicLong();

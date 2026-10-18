@@ -4,8 +4,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.Optional;
 
 /**
- * Extracts the {@code Host:} header from a plaintext HTTP request. Direct
- * port of {@code DPI::HTTPHostExtractor} (sni_extractor.cpp).
+ * Extracts the {@code Host:} header from a plaintext HTTP request.
+ * {@code DPI::HTTPHostExtractor} (sni_extractor.java).
  */
 public final class HttpHostExtractor {
 

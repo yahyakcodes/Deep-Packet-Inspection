@@ -9,12 +9,11 @@ import java.util.concurrent.atomic.AtomicLong;
 /**
  * A single Fast Path (FP) worker thread: connection tracking, DPI
  * classification (SNI/Host extraction), rule matching, and forwarding.
- * Direct port of the {@code FastPath} class defined locally in dpi_mt.cpp.
- *
+ * {@code FastPathProcessor} class defined.
  * <p>Each instance owns its flow table exclusively (fed only by its own
  * input queue via consistent hashing in {@link LoadBalancer}), so the
  * {@code HashMap} below needs no synchronization - identical reasoning to
- * the original's per-FP {@code flows_} map.
+ * the per-FP {@code flows} map.
  */
 public final class FastPathProcessor {
 

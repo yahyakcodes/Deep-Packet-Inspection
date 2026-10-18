@@ -4,15 +4,13 @@ import java.nio.charset.StandardCharsets;
 import java.util.Optional;
 
 /**
- * Extracts the queried domain name from a DNS query message. Direct port
- * of {@code DPI::DNSExtractor} (sni_extractor.cpp).
- *
- * <p>Note: exactly as in the original project, this class is fully
+ * Extracts the queried domain name from a DNS query message.
+ * {@code DPI::DNSExtractor} (SniExtractor.java).
+ * <p>This class is fully
  * implemented but not wired into the main DPI pipeline - {@link DpiEngine}
  * classifies port-53 traffic as {@link AppType#DNS} purely by port number,
- * the same as {@code dpi_mt.cpp}'s {@code classifyFlow()}. It's kept here
- * as available, working functionality for the same reason it exists in
- * the C++ sources.
+ * {@code classifyFlow()}. It's kept here
+ * as available, working functionality.
  */
 public final class DnsExtractor {
 

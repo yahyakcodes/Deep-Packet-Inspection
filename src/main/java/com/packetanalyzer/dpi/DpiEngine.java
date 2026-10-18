@@ -15,23 +15,20 @@ import java.util.Optional;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
- * Multi-threaded DPI engine: reads an input pcap, fans packets out across
+ * Multithreaded DPI engine: reads an input pcap, fans packets out across
  * Load Balancer and Fast Path thread pools for classification/blocking,
  * and writes whatever is not blocked to an output pcap.
- *
- * <p>Direct port of the {@code DPIEngine} class defined locally in
- * dpi_mt.cpp - the actual source of the prebuilt {@code dpi_engine}
- * binary shipped in the original repository (confirmed by the banner
- * text and mangled symbol names embedded in that macOS binary).
- *
- * <p>Architecture (identical to the original):
+ * <p>{@code DPIEngine} class defined
+ * binary shipped in the repository (confirmed by the banner
+ * text and mangled symbol names embedded in that OS binary).
+ * <p>Architecture :
  * <pre>
  *   Reader (this thread) --hash(tuple)--&gt; LB threads --hash(tuple)--&gt; FP threads --&gt; Output writer thread
  * </pre>
  */
 public final class DpiEngine {
 
-    /** Mirrors {@code DPIEngine::Config} in dpi_mt.cpp. */
+    /** {@code DPIEngine::Config} */
     public static final class Config {
         private int numLbs = 2;
         private int fpsPerLb = 2;
@@ -101,8 +98,8 @@ public final class DpiEngine {
 
     /**
      * Reads {@code inputFile}, classifies and filters every packet, and
-     * writes whatever was not blocked to {@code outputFile}. Direct port
-     * of {@code DPIEngine::process()}.
+     * writes whatever was not blocked to {@code outputFile}.
+     * {@code DPIEngine::process()}.
      */
     public boolean process(String inputFile, String outputFile) {
         PcapReader reader = new PcapReader();
@@ -152,7 +149,7 @@ public final class DpiEngine {
             FiveTuple tuple = new FiveTuple(srcIp, dstIp, parsed.getSrcPort(), parsed.getDestPort(), parsed.getProtocol());
 
             // Recompute the payload offset directly from the raw bytes,
-            // exactly like the original DPIEngine::process() does (it does
+            // DPIEngine::process() does (it does
             // not reuse ParsedPacket's own payload fields for this).
             int payloadOffset = 14; // Ethernet
             int payloadLength = 0;

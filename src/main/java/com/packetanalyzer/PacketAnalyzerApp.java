@@ -15,12 +15,10 @@ import java.util.Optional;
 /**
  * Basic packet-by-packet dumper: opens a pcap file and prints a
  * Wireshark-style breakdown of each packet's headers.
- *
- * <p>Direct port of {@code src/main.cpp}, which is what CMake's
+ * <p>
  * {@code packet_analyzer} target actually builds in the original project
- * (as distinct from the more advanced multi-threaded {@code dpi_engine}
- * tool, ported as {@link com.packetanalyzer.dpi.DpiEngineApp}).
- *
+ * As distinct from the more advanced multi-threaded {@code dpi_engine}
+ * tool.
  * <pre>Usage: packet-analyzer &lt;pcap_file&gt; [max_packets]</pre>
  */
 public final class PacketAnalyzerApp {

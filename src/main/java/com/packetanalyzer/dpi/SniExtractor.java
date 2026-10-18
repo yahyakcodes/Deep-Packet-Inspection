@@ -6,11 +6,9 @@ import java.util.Optional;
 /**
  * Parses a TLS Client Hello to pull out the Server Name Indication (SNI)
  * extension - the plaintext hostname visible even in encrypted HTTPS
- * connections. Direct port of {@code DPI::SNIExtractor} (sni_extractor.cpp).
- *
+ * connections. {@code DPI::SNIExtractor} (SniExtractor.java).
  * <p>{@code payload}/{@code offset}/{@code length} together describe the
- * TCP payload slice to inspect, replacing the raw {@code const uint8_t*}
- * pointer + length pair used in C++.
+ * TCP payload slice to inspect.
  */
 public final class SniExtractor {
 

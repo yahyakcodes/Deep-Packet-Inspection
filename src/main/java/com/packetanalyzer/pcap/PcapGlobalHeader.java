@@ -4,7 +4,7 @@ import java.nio.ByteOrder;
 
 /**
  * The 24-byte global header at the start of every .pcap file.
- * Direct port of {@code PacketAnalyzer::PcapGlobalHeader} (pcap_reader.h).
+ * {@code PacketAnalyzer::PcapGlobalHeader}
  */
 public final class PcapGlobalHeader {
 

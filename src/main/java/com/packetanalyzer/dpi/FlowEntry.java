@@ -3,8 +3,8 @@ package com.packetanalyzer.dpi;
 /**
  * Per-flow tracking state, owned exclusively by a single
  * {@link FastPathProcessor} (each fast-path thread has its own flow table,
- * so no synchronization is needed here). Direct port of the
- * {@code FlowEntry} struct defined locally in dpi_mt.cpp.
+ * so no synchronization is needed here).
+ * {@code FlowEntry} struct defined locally in dpi_mt.java.
  */
 public final class FlowEntry {
 

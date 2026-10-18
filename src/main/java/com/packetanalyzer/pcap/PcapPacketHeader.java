@@ -2,7 +2,7 @@ package com.packetanalyzer.pcap;
 
 /**
  * The 16-byte per-packet header that precedes every packet's bytes in a
- * .pcap file. Direct port of {@code PacketAnalyzer::PcapPacketHeader}.
+ * .pcap file. {@code PacketAnalyzer::PcapPacketHeader}.
  */
 public final class PcapPacketHeader {
 

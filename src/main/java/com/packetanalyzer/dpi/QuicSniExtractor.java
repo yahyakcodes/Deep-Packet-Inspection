@@ -3,14 +3,13 @@ package com.packetanalyzer.dpi;
 import java.util.Optional;
 
 /**
- * Best-effort SNI extraction from QUIC/HTTP3 Initial packets. Direct port
- * of {@code DPI::QUICSNIExtractor} (sni_extractor.cpp) - the original is
- * explicitly a simplified heuristic (its own comments say so), and this
+ * Best-effort SNI extraction from QUIC/HTTP3 Initial packets.
+ * {@code DPI::QUICSNIExtractor} (SniExtractor.java) - this
+ * explicitly a simplified heuristic, and this
  * keeps the same behavior rather than "improving" it into a real QUIC
- * CRYPTO-frame parser the original never had.
- *
+ * CRYPTO-frame parser.
  * <p>Like {@link DnsExtractor}, this exists in the source but is not
- * called from {@link DpiEngine}'s main pipeline, matching the original.
+ * called from {@link DpiEngine}'s main pipeline.
  */
 public final class QuicSniExtractor {
 

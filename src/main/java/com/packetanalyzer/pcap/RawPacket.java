@@ -2,7 +2,7 @@ package com.packetanalyzer.pcap;
 
 /**
  * A single captured packet exactly as read from a .pcap file: its header
- * plus the raw bytes. Direct port of {@code PacketAnalyzer::RawPacket}.
+ * plus the raw bytes. {@code PacketAnalyzer::RawPacket}.
  */
 public final class RawPacket {
 

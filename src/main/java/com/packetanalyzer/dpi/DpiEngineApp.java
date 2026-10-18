@@ -4,13 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Command-line entry point for the multi-threaded DPI engine. Direct port
- * of {@code main()} in dpi_mt.cpp - this is the Java equivalent of the
- * {@code dpi_engine} binary shipped in the original repository.
- *
+ * Command-line entry point for the multi-threaded DPI engine.
+ * {@code main()}
  * <pre>
  * Usage: dpi-engine &lt;input.pcap&gt; &lt;output.pcap&gt; [options]
- *
  * Options:
  *   --block-ip &lt;ip&gt;        Block source IP
  *   --block-app &lt;app&gt;      Block application (YouTube, Facebook, etc.)

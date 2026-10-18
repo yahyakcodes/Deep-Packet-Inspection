@@ -1,6 +1,6 @@
 package com.packetanalyzer.parser;
 
-/** TCP header flag bits. Port of the {@code PacketAnalyzer::TCPFlags} namespace. */
+/** TCP header flag bits. {@code PacketAnalyzer::TCPFlags}. */
 public final class TcpFlags {
     public static final int FIN = 0x01;
     public static final int SYN = 0x02;

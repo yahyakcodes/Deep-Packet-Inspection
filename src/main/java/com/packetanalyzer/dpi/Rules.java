@@ -9,12 +9,8 @@ import java.util.Set;
 
 /**
  * Blocking rules: source IPs, application types, and domain substrings.
- * Direct port of the {@code Rules} class defined locally in dpi_mt.cpp
- * (a simpler, self-contained sibling of the more elaborate
- * {@code DPI::RuleManager} in rule_manager.h/.cpp, which is not part of
- * the shipped {@code dpi_engine} - see the project README for details).
- *
- * <p>Thread-safe: read from every fast-path thread, written once at
+ * {@code Rules} class defined
+ * A simpler, self-contained sibling of the more elaborate
  * startup from the CLI arguments.
  */
 public final class Rules {

@@ -3,8 +3,8 @@ package com.packetanalyzer.dpi;
 import java.util.Locale;
 
 /**
- * Application classification. Direct port of {@code DPI::AppType} plus the
- * {@code appTypeToString} / {@code sniToAppType} functions in types.h/.cpp.
+ * Application classification. {@code DPI::AppType} plus the
+ * {@code appTypeToString} / {@code sniToAppType} functions in types.java.
  */
 public enum AppType {
     UNKNOWN("Unknown"),
@@ -53,8 +53,7 @@ public enum AppType {
     }
 
     /**
-     * Maps a detected SNI/Host domain to an application type. Direct port
-     * of {@code sniToAppType()} in types.cpp, including its exact
+     * Maps a detected SNI/Host domain to an application type. {@code sniToAppType()} in types.java, including its exact
      * substring-match ordering and lower-casing behavior.
      */
     public static AppType fromSni(String sni) {

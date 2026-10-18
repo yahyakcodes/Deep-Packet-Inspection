@@ -3,12 +3,11 @@ package com.packetanalyzer.util;
 /**
  * Helper for converting between dotted-quad IPv4 strings and the packed
  * 32-bit representation used throughout the engine.
- *
- * <p>Port note: the original C++ code does not call {@code ntohl()} on IPv4
- * addresses. {@code packet_parser.cpp} copies the 4 raw address bytes
+ * <p>Port note: the code does not call {@code ntohl()} on IPv4
+ * addresses. {@code PacketParser.java} copies the 4 raw address bytes
  * straight into a {@code uint32_t} with {@code memcpy}, and
  * {@code PacketParser::ipToString()} / the {@code parseIP()} lambdas in
- * {@code dpi_mt.cpp} both read that integer back out one byte at a time
+ * both read that integer back out one byte at a time
  * starting from the least-significant byte. The result is a "packed"
  * integer where the first dotted-quad octet lives in bits 0-7, the second
  * in bits 8-15, and so on - NOT true network byte order. It is internally
@@ -32,7 +31,7 @@ public final class IpAddress {
      * Parses a dotted-quad string ("192.168.1.50") into the packed
      * representation. Mirrors the small hand-rolled parser used for
      * {@code --block-ip} and five-tuple construction in the original
-     * {@code dpi_mt.cpp} (non-numeric characters other than '.' are
+     * (non-numeric characters other than '.' are
      * ignored, exactly like the original).
      */
     public static int parseDottedQuad(String ip) {

@@ -1,6 +1,6 @@
 package com.packetanalyzer.parser;
 
-/** IP protocol numbers. Port of the {@code PacketAnalyzer::Protocol} namespace. */
+/** IP protocol numbers. {@code PacketAnalyzer::Protocol}. */
 public final class ProtocolNumbers {
     public static final int ICMP = 1;
     public static final int TCP = 6;

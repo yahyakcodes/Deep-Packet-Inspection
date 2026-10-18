@@ -5,11 +5,10 @@ import com.packetanalyzer.util.IpAddress;
 
 /**
  * Uniquely identifies a connection/flow: source/destination IP, source/
- * destination port, and protocol. Direct port of {@code DPI::FiveTuple}
+ * destination port, and protocol. {@code DPI::FiveTuple}
  * plus {@code DPI::FiveTupleHash} (types.h).
- *
  * <p>IP addresses use the packed representation described in
- * {@link IpAddress} - the same one the original C++ code uses internally.
+ * {@link IpAddress}
  */
 public final class FiveTuple {
 
@@ -47,7 +46,7 @@ public final class FiveTuple {
         return protocol;
     }
 
-    /** Same shape as the reverse tuple in the C++ version (unused by the current pipeline, kept for parity). */
+    /** Same shape as the reverse tuple (unused by the current pipeline, kept for parity). */
     public FiveTuple reverse() {
         return new FiveTuple(dstIp, srcIp, dstPort, srcPort, protocol);
     }

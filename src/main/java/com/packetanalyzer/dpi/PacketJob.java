@@ -2,8 +2,8 @@ package com.packetanalyzer.dpi;
 
 /**
  * A fully self-contained packet as it travels between the reader,
- * load-balancer, and fast-path threads. Direct port of the {@code Packet}
- * struct defined locally in dpi_mt.cpp.
+ * load-balancer, and fast-path threads. {@code Packet}
+ * Defined locally in dpi_mt.java.
  */
 public final class PacketJob {
 
